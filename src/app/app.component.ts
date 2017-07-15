@@ -20,7 +20,7 @@ export class AppComponent {
 
   // lineChart for soil movement
   public lineChartData3:Array<any> = [
-    {data: [22, 5, 10, 0, 0, 0, 0], label: 'soil movement'},
+    {data: [22, 5, 10, 0, 0, 0, 0], label: 'Soil Movement'},
   ];
 
   public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
