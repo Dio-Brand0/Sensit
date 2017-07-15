@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
@@ -16,5 +16,36 @@
   <li>
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div style="display: block;">
+        <canvas baseChart width="400" height="400"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6" style="margin-bottom: 10px">
+        <table class="table table-responsive table-condensed">
+          <tr>
+            <th *ngFor="let label of lineChartLabels">{{label}}</th>
+          </tr>
+          <tr *ngFor="let d of lineChartData">
+            <td *ngFor="let label of lineChartLabels; let j=index">{{d && d.data[j]}}</td>
+          </tr>
+        </table>
+        <button (click)="randomize()">CLICK</button>
+      </div>
+    </div>
+
+
 
