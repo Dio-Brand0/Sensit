@@ -17,11 +17,20 @@
     <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
   </li>
 </ul> -->
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+           <div class="navbar-header">
+            </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+          </ul>
+        </div>
+      </nav>
 
-
-
+<tabset [justified]="true">
+  <tab heading="Status">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-lg-4">
         <div style="display: block;">
           <canvas baseChart width="400" height="400"
             [datasets]="lineChartData1"
@@ -35,8 +44,8 @@
           </canvas>
         </div>
       </div>
-
-      <div class="col-md-3">
+      
+      <div class="col-lg-4">
         <div style="display: block;">
           <canvas baseChart width="400" height="400"
             [datasets]="lineChartData2"
@@ -51,7 +60,7 @@
         </div>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-lg-4">
         <div style="display: block;">
           <canvas baseChart width="400" height="400"
             [datasets]="lineChartData3"
@@ -77,6 +86,25 @@
         <button (click)="randomize()">CLICK</button>
       </div> -->
     </div>
+  <div class="row">
+    <div class="col-lg-4">
+    <progress class="progress progress-striped" value="27" max="100" type="warning">22%</progress>
+  </div>
+  
+  <div class="col-lg-4">
+    <progress class="progress progress-striped" value="27" max="100" type="warning">22%</progress>
+  </div>
+  <div class="col-lg-4">
+    <progress class="progress progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></progress>
+  </div>
+</div>
+  </tab>
+  <tab heading="Data Log">
+
+  </tab>
+  <tab heading="Issue History">Isue History</tab>
+</tabset>
+
 
 
 

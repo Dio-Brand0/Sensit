@@ -10,6 +10,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,15 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    BsDropdownModule.forRoot(),
     ChartsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    TabsModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    ProgressbarModule.forRoot()
   ],
   providers: [CrudService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule{}
+export class DemoTabsVerticalPillsComponent {}
