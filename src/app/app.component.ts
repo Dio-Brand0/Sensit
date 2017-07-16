@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { CrudService } from './service/crud/crud.service';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
+
+  constructor(private crudService: CrudService) { }
 
   // lineChart for thermal movement
   public lineChartData1:Array<any> = [
@@ -74,6 +78,14 @@ export class AppComponent {
  
   public chartHovered(e:any):void {
     console.log(e);
+  }
+
+  getThermal(){
+    this.crudService.thermal_items
+  }
+
+  ngOnInit() {
+
   }
 
 }
